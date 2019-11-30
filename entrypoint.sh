@@ -30,13 +30,13 @@ function installAwsSam(){
 }
 
 function runSam(){
-	echo "Run sam ${INPUT_SAM_COMMAND} ${*}"
-	output=$(sam ${INPUT_SAM_COMMAND} ${*} 2>&1)
+	echo "Run sam ${INPUT_SAM_COMMAND}"
+	output=$(sam ${INPUT_SAM_COMMAND} 2>&1)
 	exitCode=${?}
 	echo "${output}"
 
 	commentStatus="Failed"
-	if [ "${exitCode}" == "0" -o "${exitCode}" == "1" ]; then
+	if [ "${exitCode}" == "0" ]; then
 		commentStatus="Success"
 	fi
 
