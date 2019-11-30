@@ -4,7 +4,7 @@ set -u
 
 function parseInputs(){
 	# Required inputs
-	if [ "${INPUT_SAM_SUBCOMMAND}" == "" ]; then
+	if [ "${INPUT_SAM_COMMAND}" == "" ]; then
 		echo "Input sam_subcommand cannot be empty"
 		exit 1
 	fi
@@ -30,8 +30,8 @@ function installAwsSam(){
 }
 
 function runSam(){
-	echo "Run sam ${INPUT_SAM_SUBCOMMAND} ${*}"
-	output=$(sam ${INPUT_SAM_SUBCOMMAND} ${*} 2>&1)
+	echo "Run sam ${INPUT_SAM_COMMAND} ${*}"
+	output=$(sam ${INPUT_SAM_COMMAND} ${*} 2>&1)
 	exitCode=${?}
 	echo "${output}"
 
@@ -41,7 +41,7 @@ function runSam(){
 	fi
 
 	if [ "$GITHUB_EVENT_NAME" == "pull_request" ] && [ "${INPUT_ACTIONS_COMMENT}" == "true" ]; then
-		commentWrapper="#### \`sam ${INPUT_SAM_SUBCOMMAND}\` ${commentStatus}
+		commentWrapper="#### \`sam ${INPUT_SAM_COMMAND}\` ${commentStatus}
 <details><summary>Show Output</summary>
 
 \`\`\`

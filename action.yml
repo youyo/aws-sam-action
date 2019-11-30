@@ -8,7 +8,7 @@ inputs:
   sam_version:
     description: 'AWS SAM version to install.'
     default: 'latest'
-  sam_subcommand:
+  sam_command:
     description: 'AWS SAM subcommand to execute.'
     required: true
   actions_comment:
