@@ -27,7 +27,7 @@ jobs:
       - name: sam deploy
         uses: youyo/aws-sam-action/python3.8@master
         with:
-          sam_command: 'deploy --no-fail-on-empty-changeset'
+          sam_command: 'deploy --no-fail-on-empty-changeset --no-confirm-changeset'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -68,7 +68,7 @@ jobs:
       - name: sam deploy
         uses: youyo/aws-sam-action/python3.8@master
         with:
-          sam_command: 'deploy --no-fail-on-empty-changeset'
+          sam_command: 'deploy --no-fail-on-empty-changeset --no-confirm-changeset'
 ```
 
 ## Supported build language
