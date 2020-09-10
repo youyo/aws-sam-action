@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: sam build
-        uses: youyo/aws-sam-action/python3.8@master
+        uses: youyo/aws-sam-action/python3.8@v2
         with:
           sam_command: build
         env:
@@ -26,7 +26,7 @@ jobs:
           AWS_DEFAULT_REGION: ap-northeast-1
 
       - name: sam deploy
-        uses: youyo/aws-sam-action/python3.8@master
+        uses: youyo/aws-sam-action/python3.8@v2
         with:
           sam_command: 'deploy --no-fail-on-empty-changeset --no-confirm-changeset'
         env:
@@ -49,7 +49,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: sam validate
-        uses: youyo/aws-sam-action/python3.8@master
+        uses: youyo/aws-sam-action/python3.8@v2
         with:
           sam_command: validate
           actions_comment: true
@@ -87,12 +87,12 @@ jobs:
         uses: actions/checkout@master
 
       - name: sam build
-        uses: youyo/aws-sam-action/python3.8@master
+        uses: youyo/aws-sam-action/python3.8@v2
         with:
           sam_command: build
 
       - name: sam deploy
-        uses: youyo/aws-sam-action/python3.8@master
+        uses: youyo/aws-sam-action/python3.8@v2
         with:
           sam_command: 'deploy --no-fail-on-empty-changeset --no-confirm-changeset'
 ```
@@ -101,9 +101,9 @@ jobs:
 
 | Language | Syntax |
 | --- | --- |
-| python3.8 | youyo/aws-sam-action/python3.8@master |
-| python3.7 | youyo/aws-sam-action/python3.7@master |
-| python3.6 | youyo/aws-sam-action/python3.6@master |
+| python3.8 | youyo/aws-sam-action/python3.8@v2 |
+| python3.7 | youyo/aws-sam-action/python3.7@v2 |
+| python3.6 | youyo/aws-sam-action/python3.6@v2 |
 
 ## Inputs
 
