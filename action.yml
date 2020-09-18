@@ -1,4 +1,4 @@
-name: 'AWS SAM GitHub Action - Draft'
+name: 'AWS SAM GitHub Action'
 description: 'Runs AWS-SAM via GitHub Actions.'
 author: 'youyo <1003ni2@gmail.com>'
 branding:
