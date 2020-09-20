@@ -104,6 +104,7 @@ jobs:
 | python3.8 | youyo/aws-sam-action/python3.8@v2 |
 | python3.7 | youyo/aws-sam-action/python3.7@v2 |
 | python3.6 | youyo/aws-sam-action/python3.6@v2 |
+| nodejs12.x | lfantone/aws-sam-action/nodejs-current@v2 |
 
 ## Inputs
 
